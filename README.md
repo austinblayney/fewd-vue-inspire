@@ -32,7 +32,7 @@ In this project you will be expected to communicate with the following endpoints
     - `/weather`
     - `/quotes`
     - `/images`
-    - `/YOURNAME/todos` ** Note: Don't forget to replace YOURNAME with your actual name! **
+    - `/YOURNAME/todos`  _Note: Don't forget to replace YOURNAME with your actual name!_
 
 ### Todos `(/YOURNAME/todos)`
 
