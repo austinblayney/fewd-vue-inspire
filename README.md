@@ -126,6 +126,7 @@ The positioning of elements on the page is not the absolute most crucial thing f
     - Todo's can be marked complete (PUT)
     - The todolist shows the total count of tasks currently being tracked
     - The todolist takes advantage of Vuex to provide persistent data
+    - Utilize the vue-router to have at least two different paths/views in your application
 
 ### Finished?
 When You are finished please submit the link to the project in the backpack
