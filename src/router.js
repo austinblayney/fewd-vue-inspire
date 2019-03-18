@@ -13,7 +13,9 @@ export default new Router({
       component: Dashboard
     },
     {
-      path: '/todos'
+      path: '/todos',
+      name: 'todos',
+      component: Todos
       //don't forget to finish creating the key value pairs of the todo route here
     }
   ]
