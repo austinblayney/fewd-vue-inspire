@@ -14,7 +14,6 @@
    import Quote from '@/components/Quote.vue'
    import Weather from '@/components/Weather.vue'
    //what else do you want to import?
-
    export default {
       name: "dashboard",
       props: [],

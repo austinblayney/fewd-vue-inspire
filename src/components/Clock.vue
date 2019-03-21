@@ -1,20 +1,21 @@
 <template>
-   <div row>
-      <div id="clock">
-    <p class="date">{{ date }}</p>
-    <p class="time">{{ time }}</p>
-</div>
-   </div>
+  <div class="clock">
+    <div id="clock">
+      <p class="date">{{ date }}</p>
+      <p class="time">{{ time }}</p>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-   name: "",
+   name: "clock",
    props: [],
    data() {
-      return {
+      return {}
+   },
    computed: {},
    methods: {},
    components: {}
 }
-</script>
+   </script>

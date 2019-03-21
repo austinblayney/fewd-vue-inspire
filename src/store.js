@@ -28,7 +28,8 @@ export default new Vuex.Store({
     //EXAMPLE: weatherData: {}
     quoteData: {},
     weatherData: {},
-    todos: []
+    todos: [],
+    clock: {}
   },
   mutations: {
     imageData(state, data) {//this mutation will update the state and then envoke all of the functions of the observers that are watching the updated property

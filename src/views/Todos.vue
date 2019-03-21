@@ -12,11 +12,13 @@
                 <form @submit.prevent="addTodo">
                     <textarea required type="text" v-model="newTodo.description" placeholder="addTodo"></textarea>
                     <button type="submit" class="btn btn-primary ">Submit</button>
-
                 </form>
             </div>
         </div>
         <div class="row">
+            <div class="col-12">
+                <h5>You have {{todos.length}} todos</h5>
+            </div>
             <todo-card v-for="todo in todos" :todoData="todo" />
         </div>
     </div>
@@ -42,7 +44,7 @@
         computed: {
             todos() {
                 return this.$store.state.todos
-            }
+            },
         },
         //What property in the state will you care to observe here?
         methods: {
@@ -60,6 +62,10 @@
 </script>
 <style>
     h1 {
+        color: antiquewhite
+    }
+
+    h5 {
         color: antiquewhite
     }
 </style>
