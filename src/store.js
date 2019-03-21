@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Axios from 'axios'
+import router from './router';
 
 Vue.use(Vuex)
 
@@ -26,7 +27,8 @@ export default new Vuex.Store({
     //Add additional properties here that your application will care about
     //EXAMPLE: weatherData: {}
     quoteData: {},
-    weatherData: {}
+    weatherData: {},
+    todos: []
   },
   mutations: {
     imageData(state, data) {//this mutation will update the state and then envoke all of the functions of the observers that are watching the updated property
@@ -37,8 +39,12 @@ export default new Vuex.Store({
     },
     weatherData(state, data) {
       state.weatherData = data
+    },
+    todos(state, data) {
+      state.todos = data
     }
   },
+
   actions: {
     getData({ dispatch }) {
       dispatch('getImageData')
@@ -74,7 +80,36 @@ export default new Vuex.Store({
           commit('weatherData', weather)
         })
     },
-    getTodos() { },
+    getTodos({ commit }) {
+      _todoApi.get('')
+        .then(res => {
+          console.log(res)
+          commit('todos', res.data.data)
+        })
+    },
+    postTodo({ commit, dispatch }, payload) {
+      _todoApi.post('', payload)
+        .then(res => {
+          console.log(res)
+          dispatch('getTodos')
+        })
+    },
+
+    deleteTodo({ dispatch }, todoId) {
+      _todoApi.delete(todoId)
+        .then(res => {
+          console.log(res)
+          dispatch('getTodos')
+        })
+    },
+    putTodo({ dispatch }, todo) {
+      _todoApi.put(todo._id, todo)
+        .then(res => {
+          console.log(res)
+          dispatch('getTodos')
+        })
+    }
+
     // you will need additional todo actions!
     //create
     //put

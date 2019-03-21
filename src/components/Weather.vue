@@ -1,6 +1,6 @@
 <template>
    <div class="weather">
-      <h1>{{fahrenheit.toFixed(2)}}</h1>
+      <h1>{{fahrenheit.toFixed(2)}}°</h1>
       <h1>{{weather.icon}}</h1>
       <h1>{{weather.description}}</h1>
    </div>
